@@ -1,0 +1,10 @@
+.navBar ul li a {
+	color: black;
+}
+#logo{
+	height: 50px;
+	width: 50px;
+}
+.logo {
+	padding: 5px;
+}
