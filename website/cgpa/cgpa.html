@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="cgpa.css">
+        <link rel="stylesheet" type="text/css" href="../src/css/menuToggle.css">
+
+    </head>
+    <body>
+        <nav role="navigation">
+            <div id="menuToggle">
+              <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+              <input type="checkbox" />
+              
+              <!--
+              Some spans to act as a hamburger.
+              
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+              <ul id="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="../entertainment.html">Entertainment</a></li>
+
+                <li><a href="#">Attendance Manager</a></li>
+                <li><a href="../src/phonebook.pdf" target="_blank">Imp Contacts</a></li>
+                <li><a href="../contact.html">About Us</a></li>
+              </ul>
+            </div>
+          </nav>
+   
+		<form action=""  method="post">
+		
+            <h1>CGPA calculator</h1>
+            <p>
+                Enter your SGPAs according to semester<br>
+                Leave fields blank for semesters not completed
+                
+            </p>
+				
+			<label for="Semester">Semester 1:</label>
+			<input type="text" id="sem1" name="sem1">	
+			
+			<label for="Semester">Semester 2:</label>
+			<input type="text" id="sem2" name="sem2">	
+			
+			<label for="Semester">Semester 3:</label>
+			<input type="text" id="sem3" name="sem3">	
+			
+			<label for="Semester">Semester 4:</label>
+			<input type="text" id="sem4" name="sem4">	
+			
+			<label for="Semester">Semester 5:</label>
+			<input type="text" id="sem5" name="sem5">					
+			
+			<label for="Semester">Semester 6:</label>
+			<input type="text" id="sem6" name="sem6">
+			
+			<label for="Semester">Semester 7:</label>
+			<input type="text" id="sem7" name="sem7">
+            
+            <label for="Semester">Semester 8:</label>
+			<input type="text" id="sem8" name="sem8">
+				
+			<div class="container">			
+				<button class="btn" type="submit" onclick="myFunction()">Submit</button>
+				<button class="btn" type="reset">Reset</button>
+			</div>
+		</form>
+            
+        <script >
+            function myFunction(){
+                var sum=0;
+                var sem1 = document.getElementById(sem1);
+                alert('You\'re nearly there! To complete your entry, you simply need to tap \'continue\' on the next page. Good luck!');            }
+            }
+
+        </script>
+    </body>
+</html>
