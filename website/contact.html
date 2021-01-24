@@ -22,22 +22,22 @@
   <style type="text/css">
 
 #loading
-   {
-   background-color: white;
-   position: fixed;
-   top:0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 100;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   }
-   .gif
-   {
-   width: 50%;
-   }
+  {
+  background-color: white;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gif
+{
+width: 50%;
+}
 header,
 section {
   overflow-x: hidden;
@@ -102,74 +102,74 @@ header {
 .quiz{
   border: 2px solid rgb(219, 196, 67);
   border-radius: 10px;
+}   
+.names{
+    background-color:rgb(95, 103, 110);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-    
-    
-    .names{
-        background-color:rgb(95, 103, 110);
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    .names p{
-      font-family: 'Kalam', cursive;
-      color: rgb(236, 231, 231);
-      font-size: small;
-    }
-    .names h1{
-      font-family: 'Merriweather', serif;
-      text-shadow: 1px 1px rgb(247, 246, 246);
-    }
-    .names .subt1{
-      font-family: 'Dancing Script', cursive;
-      font-size: large;
-    }
-    .imgabout{
-      height: 200px;
-      margin-bottom: 20px;
-      border-radius: 100px;
-      box-shadow: 5px 5px 5px rgb(253, 247, 247);
-    }
-    .imgabout:hover{
-      transform: scale(1.1);
-      transition-duration: 1s ease;
-      cursor: pointer;
-      transition-timing-function: linear;
-    }
-    .formus{
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 25%;
-      padding-right: 25%;
-      background-color: rgb(241, 155, 184);
-    }
-    .formus h1{
-      font-family: 'Merriweather', serif;
-      text-shadow: 1px 1px grey;
-    }
-    .formus .subt2{
-      font-family: 'Dancing Script', cursive;
-      font-size: large;
-      color: grey;
-    }
-    .btn{
-      background-color: rgba(255,0,0,0.7) !important;
-      padding-left: 10%;
-      padding-right: 10%;
-      border: none;
-    }
-    @media only screen and (max-width: 700px){
-      .formus{
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 5%;
-      padding-right: 5%;
-      background-color: lavenderblush;
-    }
-    .names{
-        background-color: rgb(59, 64, 70);
-    }
-  </style>
-  <nav role="navigation">
+.names p{
+  font-family: 'Kalam', cursive;
+  color: rgb(236, 231, 231);
+  font-size: small;
+}
+.names h1{
+  font-family: 'Merriweather', serif;
+  text-shadow: 1px 1px rgb(247, 246, 246);
+}
+.names .subt1{
+  font-family: 'Dancing Script', cursive;
+  font-size: large;
+}
+.imgabout{
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  box-shadow: 5px 5px 5px rgb(253, 247, 247);
+}
+.imgabout:hover{
+  transform: scale(1.1);
+  transition-duration: 1s ease;
+  cursor: pointer;
+  transition-timing-function: linear;
+}
+.formus{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 25%;
+  padding-right: 25%;
+  background-color: rgb(241, 155, 184);
+}
+.formus h1{
+  font-family: 'Merriweather', serif;
+  text-shadow: 1px 1px grey;
+}
+.formus .subt2{
+  font-family: 'Dancing Script', cursive;
+  font-size: large;
+  color: grey;
+}
+.btn{
+  background-color: rgba(255,0,0,0.7) !important;
+  padding-left: 10%;
+  padding-right: 10%;
+  border: none;
+}
+@media only screen and (max-width: 700px){
+  .formus{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: lavenderblush;
+}
+.names{
+    background-color: rgb(59, 64, 70);
+}
+</style>
+</head>
+  <body>
+    <nav role="navigation">
         <div id="menuToggle">
           <!--
           A fake / hidden checkbox is used as click reciever,
@@ -198,7 +198,7 @@ header {
             
             <li><a href="#">Attendance Manager</a></li>
             <li><a href="#">CGPA calculator</a></li>
-            <li><a href="contact.html">Imp Contacts</a></li>
+            <li><a href="src/phonebook.pdf" target="_blank">Imp Contacts</a></li>
            
           </ul>
         </div>
@@ -269,6 +269,5 @@ header {
             function myFunction(){
             preloader.style.display = 'none';}
         </script>
-</body>
-  
-</html> 
+</body> 
+</html>
