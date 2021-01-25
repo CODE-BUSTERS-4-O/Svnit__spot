@@ -36,7 +36,6 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">Academics</a></li>
                 <li><a href="../entertainment.html">Entertainment</a></li>
-
                 <li><a href="#">Attendance Manager</a></li>
                 <li><a href="../src/phonebook.pdf" target="_blank">Imp Contacts</a></li>
                 <li><a href="../contact.html">About Us</a></li>
@@ -79,14 +78,19 @@
 				
 			<div class="container">			
 				<button class="btn" type="button" onclick="myFunction()">Submit</button>
-				<button class="btn" type="reset">Reset</button>
+				<button class="btn" type="reset" onclick="reseet()">Reset</button>
             </div>
             <label for="Result">Result</label>
 			<div id ="ans"></div>
 		</form>
             
         <script >
+            var textAnswer;
+
+            
+
             function myFunction(){
+                
                 var sum=0;
                 var count=0;
                 var sem1=document.getElementById('sem1');
@@ -132,14 +136,19 @@
                 }
                 
                 var cgpa=sum/count;
-                // alert('Your CGPA is '+cgpa +'.');
+                
                 var h1 = document.createElement('p');
-                var textAnswer = document.createTextNode('Your CGPA is '+ cgpa+ ' .');
+                textAnswer = document.createTextNode('Your CGPA is '+ cgpa+ ' .');
                 h1.setAttribute('id', 'cgpa');
                 h1.appendChild(textAnswer);
                 document.getElementById('ans').appendChild(h1);
                 
             }
+            function reseet() {
+                textAnswer.remove();
+            
+            }
+            
 
         </script>
     </body>
