@@ -44,7 +44,7 @@
             </div>
           </nav>
    
-		<form  action="cgpa.html" method="post">
+		<form >
 		
             <h1>CGPA calculator</h1>
             <p>
@@ -78,7 +78,7 @@
 			<input type="text" id="sem8" name="sem8">
 				
 			<div class="container">			
-				<button class="btn" type="submit" onclick="myFunction()">Submit</button>
+				<button class="btn" type="button" onclick="myFunction()">Submit</button>
 				<button class="btn" type="reset">Reset</button>
             </div>
             <label for="Result">Result</label>
@@ -132,12 +132,12 @@
                 }
                 
                 var cgpa=sum/count;
-                alert('Your CGPA is '+cgpa +'.');
-                // var h1 = document.createElement('p');
-                // var textAnswer = document.createTextNode('Your CGPA is '+ cgpa+ ' .');
-                // h1.setAttribute('id', 'cgpa');
-                // h1.appendChild(textAnswer);
-                // document.getElementById('ans').appendChild(h1);
+                // alert('Your CGPA is '+cgpa +'.');
+                var h1 = document.createElement('p');
+                var textAnswer = document.createTextNode('Your CGPA is '+ cgpa+ ' .');
+                h1.setAttribute('id', 'cgpa');
+                h1.appendChild(textAnswer);
+                document.getElementById('ans').appendChild(h1);
                 
             }
 
