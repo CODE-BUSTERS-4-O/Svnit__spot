@@ -35,12 +35,6 @@
   }
   
   input[type="text"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="number"],
-  input[type="tel"],
-  textarea,
   select {
     background: rgba(255,255,255,0.1);
     border: none;
@@ -63,10 +57,7 @@
       box-shadow:0 0 5px #001a0d;
   }
   
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin: 0 4px 8px 0;
-  }
+  
   
   select {
     padding: 6px;

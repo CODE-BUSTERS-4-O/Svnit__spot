@@ -44,7 +44,7 @@
             </div>
           </nav>
    
-		<form action=""  method="post">
+		<form  action="cgpa.html" method="post">
 		
             <h1>CGPA calculator</h1>
             <p>
@@ -80,14 +80,65 @@
 			<div class="container">			
 				<button class="btn" type="submit" onclick="myFunction()">Submit</button>
 				<button class="btn" type="reset">Reset</button>
-			</div>
+            </div>
+            <label for="Result">Result</label>
+			<div id ="ans"></div>
 		</form>
             
         <script >
             function myFunction(){
                 var sum=0;
-                var sem1 = document.getElementById(sem1);
-                alert('You\'re nearly there! To complete your entry, you simply need to tap \'continue\' on the next page. Good luck!');            }
+                var count=0;
+                var sem1=document.getElementById('sem1');
+                var sem2=document.getElementById('sem2');
+                var sem3=document.getElementById('sem3');
+                var sem4=document.getElementById('sem4');
+                var sem5=document.getElementById('sem5');
+                var sem6=document.getElementById('sem6');
+                var sem7=document.getElementById('sem7');
+                var sem8=document.getElementById('sem8');
+                
+
+                if(!(typeof sem1 !== "undefined" && sem1.value == '')){
+                    sum+=parseFloat(sem1.value);
+                    count++;
+                }
+                if(!(typeof sem2 !== "undefined" && sem2.value == '')){
+                    sum+=parseFloat(sem2.value);
+                    count++;
+                }
+                if(!(typeof sem3 !== "undefined" && sem3.value == '')){
+                    sum+=parseFloat(sem3.value);
+                    count++;
+                }
+                if(!(typeof sem4 !== "undefined" && sem4.value == '')){
+                    sum+=parseFloat(sem4.value);
+                    count++;
+                }
+                if(!(typeof sem5 !== "undefined" && sem5.value == '')){
+                    sum+=parseFloat(sem5.value);
+                    count++;
+                }
+                if(!(typeof sem6 !== "undefined" && sem6.value == '')){
+                    sum+=parseFloat(sem6.value);
+                    count++;
+                }
+                if(!(typeof sem7 !== "undefined" && sem7.value == '')){
+                    sum+=parseFloat(sem7.value);
+                    count++;
+                }if(!(typeof sem8 !== "undefined" && sem8.value == '')){
+                    sum+=parseFloat(sem8.value);
+                    count++;
+                }
+                
+                var cgpa=sum/count;
+                alert('Your CGPA is '+cgpa +'.');
+                // var h1 = document.createElement('p');
+                // var textAnswer = document.createTextNode('Your CGPA is '+ cgpa+ ' .');
+                // h1.setAttribute('id', 'cgpa');
+                // h1.appendChild(textAnswer);
+                // document.getElementById('ans').appendChild(h1);
+                
             }
 
         </script>
