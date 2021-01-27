@@ -27,8 +27,7 @@ if(isset($_POST["submit"])){
     }
 
     createUser($conn, $name, $email, $pwd);
-    header("location: ../signUp.html");
-    exit();
+    
     
 }else{
     header("location: ../signIn_Up.php");

@@ -57,7 +57,7 @@ function emailExists($conn, $email){
 } 
 
 function createUser($conn, $name, $email, $pwd){
-    $sql = "INSERT INTO users (usersName, usersEmail, usersPwd) VALUES (?, ?, ?);";
+    $sql =  "INSERT INTO users (usersName, usersEmail, usersPwd) VALUES (?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -65,11 +65,13 @@ function createUser($conn, $name, $email, $pwd){
         exit();
     }
 
-    $heshedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+    // $heshedPwd = password_hash($pwd, PASSWORD_DEFAULT );
 
-    mysqli_stmt_bind_param($stmt, "sss", $name, $email, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "sss", $name, $email, $pwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+    header("location: ../signUp.html");
+    exit();
 } 
 
 function emptyInputLogin($email, $pwd){
@@ -84,7 +86,7 @@ function emptyInputLogin($email, $pwd){
 }
 
 function loginUser($conn, $email, $pwd){
-    $emailExist = emailExists($conn,$email);
+    $emailExist = emailExists($conn, $email);
 
     if($emailExist === false){
         header("Location : ../signIn_Up.php?error=wronglogin");
