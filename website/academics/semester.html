@@ -4,86 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="semester.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/menuToggle.css">
+
 
 </head>
 <body>
-
-
-    
-    
-    <section class="tabs">
-     
-        <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
-        <label for="tab-1" class="tab-label-1">Tab 1</label>
-    
-        <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
-        <label for="tab-2" class="tab-label-2">Tab 2</label>
-    
-        <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3"/>
-        <label for="tab-3" class="tab-label-3">Tab 3</label>
-    
-        <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4"/>
-        <label for="tab-4" class="tab-label-4">Tab 4</label>
-
-        <input id="tab-5" type="radio" name="radio-set" class="tab-selector-5"/>
-        <label for="tab-5" class="tab-label-5">Tab 5</label>
-    
-        <input id="tab-6" type="radio" name="radio-set" class="tab-selector-6" />
-        <label for="tab-6" class="tab-label-6">Tab 6</label>
-    
-        <input id="tab-7" type="radio" name="radio-set" class="tab-selector-7"/>
-        <label for="tab-7" class="tab-label-7">Tab 7</label>
-    
-        <input id="tab-8" type="radio" name="radio-set" class="tab-selector-8"/>
-        <label for="tab-8" class="tab-label-8">Tab 8</label>
-    
-        <!--<div class="clear-shadow"></div>-->
-    
-        <div class="content">
-          <div class="content-1">
-            <h2>Tab 1</h2>
-            <p> s at nibh.io id, mattis justo. Duis malesuada diam rutrum risus dignissim interdum.</p>
-          </div>
-          <div class="content-2">
-            <h2>Tab 2</h2>
-            <p> felis sed accumsan.	</p>
-            <p>rcu sed pulvinar.</p>
-          </div>
-          <div class="content-3">
-            <h2>Tab 3</h2>
-            <p>lis ac.</p>
-          </div>
-          <div class="content-4">
-            <h2>Tab 4</h2>
-            <p>Lissim interdum.</p>
-            <p>Aenean sed accumsan.</p>
-            <p>arcu sed pulvinar.</p>
-          </div>
-          <div class="content-5">
-            <h2>Tab 5</h2>
-            <p> s at nibh.io id, mattis justo. Duis malesuada diam rutrum risus dignissim interdum.</p>
-          </div>
-          <div class="content-6">
-            <h2>Tab 6</h2>
-            <p> felis sed accumsan.	</p>
-            <p>rcu sed pulvinar.</p>
-          </div>
-          <div class="content-7">
-            <h2>Tab 7</h2>
-            <p>lis ac.</p>
-          </div>
-          <div class="content-8">
-            <h2>Tab 8</h2>
-            <p>Lissim interdum.</p>
-            <p>Aenean sed accumsan.</p>
-            <p>arcu sed pulvinar.</p>
-          </div>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Attendance Manager</a></li>
+            <li><a href="cgpa/cgpa.html">CGPA calculator</a></li>
+            <li><a href="src/phonebook.pdf" target="_blank">Imp Contacts</a></li>
+            <li><a href="contact.html">About Us</a></li>
+          </ul>
         </div>
-    </section>
-
+      </nav>
+      <h1>CSS Tabs</h1>
+      <h2>Transitioning Between Variable Heights</h2>
+      
+      <div class="container">
+      
+        <div class="demo-section">
+          <p>Praesent \ arcu.</p>
+        </div>
+      
+        <div class="tab-wrap">
+      
+          <!-- active tab on page load gets checked attribute -->
+          <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+          <label for="tab1">Short</label>
+      
+          <input type="radio" id="tab2" name="tabGroup1" class="tab">
+          <label for="tab2">Medium</label>
+      
+          <input type="radio" id="tab3" name="tabGroup1" class="tab">
+          <label for="tab3">Long</label>
+      
+          <div class="tab__content">
+            <h3>Short Section</h3>
+            <p>Praesen lputate eget, arcu.</p>
+          </div>
+      
+          <div class="tab__content">
+            <h3>Medium Section</h3>
+            <p>Praesent arcu.</p>
+      
+            <p>In enim viverra.</p>
+          </div>
+      
+          <div class="tab__content">
+            <h3>Long Section</h3>
+            <p>Praesent arcu.</p>
+      
+            <p>In enim  viverra.</p>
+      
+            <p>Praesent eget, arcu.</p>
+      
+            <p>In enim  viverra.</p>
+          </div>
+      
+        </div>
+      
+        <div class="demo-section">
+          <p>Donec insectetuer adipiscing elit.</p>
+      
+          <p>In edit viverra.</p>
+        </div>
+      
+        <div class="tab-wrap">
+      
+          <input type="radio" id="tab4" name="tabGroup2" class="tab" checked>
+          <label for="tab4">Apples</label>
+      
+          <input type="radio" id="tab5" name="tabGroup2" class="tab">
+          <label for="tab5">Oranges</label>
+      
+          <input type="radio" id="tab6" name="tabGroup2" class="tab">
+          <label for="tab6">Bananas</label>
+      
+          <input type="radio" id="tab7" name="tabGroup2" class="tab">
+          <label for="tab7">Kiwis</label>
+      
+          <input type="radio" id="tab8" name="tabGroup2" class="tab">
+          <label for="tab8">Tomatos</label>
+      
+          <div class="tab__content">
+            <h3>Apples</h3>
+            <p>Praesent nonummy mi arcu.</p>
+          </div>
+      
+          <div class="tab__content">
+            <h3>Oranges</h3>
+            <p>Praesent neget, arcu.</p>
+      
+            <p>In enimiverra.</p>
+          </div>
+      
+          <div class="tab__content">
+            <h3>Bananas</h3>
+            <p>Praesent ne eget, arcu.</p>
+          </div>
+      
+          <div class="tab__content">
+            <h3>Kiwis</h3>
+            <p>Praesent nonummy mi in odio.</p>
+          </div>
+      
+          <div class="tab__content">
+            <h3>Tomatos</h3>
+            <p>Praesent  rutrum.</p>
+          </div>
+      
+        </div>
+      
+        <div class="demo-section">
+          <p>Etiam ut viverra.</p>
+      
+          <p>Praesent , arcu.</p>
+        </div>
+      
+      </div>
 </body>
 </html>
