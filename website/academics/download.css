@@ -1,0 +1,22 @@
+.table {
+    border:20px ridge rosybrown;
+    text-align: center;
+    margin-top: 10%;
+    background-color: rgb(236, 215, 215);
+    text-decoration: none;
+    
+}
+.body {
+    background-color: rgb(59, 64, 70);
+    padding-top:2 rem;
+    padding-bottom: 2 rem;
+    height: 80%;
+}
+.first {
+    background-color: rgb(228, 149, 149);
+    font-weight: bold;
+    font-size: x-large;
+}
+.table td{
+    font-size: large;
+}
