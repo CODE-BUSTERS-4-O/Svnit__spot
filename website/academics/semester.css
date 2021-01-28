@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   position: relative;
   list-style: none;
-  background-color: #fff;
+  background-color: rgb(236, 215, 215);
   margin: 40px 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
@@ -73,16 +73,16 @@
   border-bottom-left-radius: 0;
 }
 .tab:checked + label {
-  background-color: #fff;
+  background-color: rgb(228, 149, 149);
   box-shadow: 0 -1px 0 #fff inset;
   cursor: default;
 }
 .tab:checked + label:hover {
   box-shadow: 0 -1px 0 #fff inset;
-  background-color: #fff;
+  background-color: rgb(36, 199, 158);
 }
 .tab + label {
-  box-shadow: 0 -1px 0 #eee inset;
+  box-shadow: 0 -1px 0 rgb(238, 238, 238) inset;
   border-radius: 6px 6px 0 0;
   cursor: pointer;
   display: block;
@@ -102,7 +102,7 @@
   background-color: #f9f9f9;
   box-shadow: 0 1px 0 #f4f4f4 inset;
 }
-.tab__content {
+.tab__content{
   padding: 10px 25px;
   background-color: transparent;
   position: absolute;
@@ -113,10 +113,23 @@
   transform: translateY(-3px);
   border-radius: 6px;
 }
+.tab__content ul li a {
+  
+  text-decoration: none;
+  color: #232323;
+  font: bolder;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.tab__content ul li a:hover{
+ 
+  color: #0b614d;
+ 
+}
 /* boring stuff */
 body {
   font-family: 'Helvetica', sans-serif;
-  background-color: #e7e7e7;
+  background-color:rgb(59, 64, 70);
   color: #777;
   padding: 30px 0;
   font-weight: 300;
@@ -131,18 +144,11 @@ body {
 }
 h1, h2 {
   margin: 0;
-  color: #444;
+  color: rgb(247, 233, 233);
   text-align: center;
   font-weight: 400;
 }
 h2 {
   font-size: 1em;
   margin-bottom: 30px;
-}
-h3 {
-  font-weight: 400;
-}
-p {
-  line-height: 1.6;
-  margin-bottom: 20px;
 }
