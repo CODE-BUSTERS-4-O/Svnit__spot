@@ -1,5 +1,15 @@
 <?php
+
+require_once './dbh.inc.php';
+
 if(isset($_POST['submit'])) {
+
+    $name = $_POST["name"];
+    $sem = $_POST["sem"];
+    $subject = $_POST["subject"];
+    $type = $_POST["type"];
+
+
     $file = $_FILES['file'];
   
     $fileName = $_FILES['file']['name'];
@@ -20,6 +30,20 @@ if(isset($_POST['submit'])) {
                 $fileNameNew = uniqid('', true).".".$fileActualExt;
                 $fileDestination = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
+
+                $sql =  "INSERT INTO  filedata (fType, fUnqId , fName, fSubject, fSem) VALUES (?, ?, ?, ?, ?);";
+                $stmt = mysqli_stmt_init($conn);
+
+                if(!mysqli_stmt_prepare($stmt, $sql)){
+                    header("location: semester.html?error=stmtfailed1");
+                    exit();
+                }
+
+                // $heshedPwd = password_hash($pwd, PASSWORD_DEFAULT );
+
+                mysqli_stmt_bind_param($stmt, "ssssi", $type, $fileNameNew, $name, $subject, $sem);
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_close($stmt);
                 header("Location: index.php?uploadsuccess");
             }else{
                 echo "File Size too big!";
