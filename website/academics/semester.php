@@ -7,12 +7,43 @@
     <link rel="stylesheet" type="text/css" href="semester.css">
     <link rel="stylesheet" type="text/css" href="../src/css/menuToggle.css">
 
+<style>
+  .btn {
+  background-color:  rgb(228, 149, 149);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left:23.5%;
+  float:left;
+  border-radius:5px;
+}.buy {
+  background-color:  rgb(228, 149, 149);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-right:23.5%;
+  float:right;
+  border-radius:5px;
+}
 
+</style>
 </head>
 <body>
   <?php
     $allSubjects = array (
-      array("MLFO", "Maths", "cHEMISTRY", "EEE", "FCP", "EN"),
+      array("MLFO", "MATHS-1", "AC", "EEE"),
       array("Sub 1", "Sub 2", "Sub 3"),
       array("Sub 4", "Sub 5", "Sub 6"),
       array("Sub 7", "Sub 8", "Sub 9"),
@@ -45,16 +76,16 @@
           but hey, it's pure CSS magic.
           -->
           <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Academics</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../entertainment">Entertainment</a></li>
             <li><a href="#">Attendance Manager</a></li>
-            <li><a href="cgpa/cgpa.html">CGPA calculator</a></li>
-            <li><a href="src/phonebook.pdf" target="_blank">Imp Contacts</a></li>
-            <li><a href="contact.html">About Us</a></li>
+            <li><a href="../cgpa/cgpa.html">CGPA calculator</a></li>
+            <li><a href="../src/phonebook.pdf" target="_blank">Imp Contacts</a></li>
+            <li><a href="../contact.html">About Us</a></li>
           </ul>
         </div>
       </nav>
-      <div class="xyz" style="color:yellow"><a href="./index.php">UPLOAD DOCUMENT</a></div>
+      
       <h1>All semester</h1>
       
       <div class="container">
@@ -110,6 +141,7 @@
         
         
       </div>
-      
+      <a href="index.php" class="btn">UPLOAD DOCUMENT</a>
+      <a href="#" class="buy">BUY OR SELL BOOKS</a>
 </body>
 </html>

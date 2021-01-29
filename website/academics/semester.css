@@ -133,6 +133,7 @@ body {
   color: #777;
   padding: 30px 0;
   font-weight: 300;
+  height: 100%;
 }
 .container {
   margin: 0 auto;
@@ -151,10 +152,4 @@ h1, h2 {
 h2 {
   font-size: 1em;
   margin-bottom: 30px;
-}
-.xyz{
-  width: 50px;
-  height:20px;
-  border:2px solid rgb(247, 233, 233);
-  border-radius: 20% ;
 }
