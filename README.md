@@ -23,4 +23,4 @@
 4. you need to create database called the library.
 5. Add SQL files(present in the register folder) in PHPMyAdmin dashboard.
 6. Place the web/ folder in your apache server.
-* RUN PROJECT
+7. RUN PROJECT
