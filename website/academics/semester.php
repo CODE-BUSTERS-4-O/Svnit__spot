@@ -54,6 +54,7 @@
           </ul>
         </div>
       </nav>
+      <div class="xyz" style="color:yellow"><a href="./index.php">UPLOAD DOCUMENT</a></div>
       <h1>All semester</h1>
       
       <div class="container">
@@ -96,7 +97,7 @@
             <?php
               for($j=0;$j<count($allSubjects[$i]);$j++){
                 ?>
-                <li><a href="#" ><?php echo $allSubjects[$i][$j]."\n";?></a></li>
+                <li><a href=<?php $sem = $i+1;$sub= $allSubjects[$i][$j]; echo "./download.php?sem='$sem'&subject='$sub'"?>><?php echo $allSubjects[$i][$j]."\n";?></a></li>
                 <?php
               }
               ?>
@@ -106,6 +107,9 @@
             }
           ?>
         </div>
+        
+        
       </div>
+      
 </body>
 </html>

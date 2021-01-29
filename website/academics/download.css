@@ -20,3 +20,12 @@
 .table td{
     font-size: large;
 }
+.xyz{
+    border:5px ridge rosybrown;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(228, 149, 149);
+    font-size: xx-large;
+    text-align: center;
+}
+
