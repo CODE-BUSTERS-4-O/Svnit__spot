@@ -15,7 +15,7 @@
   - ##### used html,css,javascript for client side scripting
   - ##### build to make your college life easy
 
-# how to open my website 
+# How to open my website ?
 
 * In order to use this project, you need to install XAMP .
 * create a folder library in htdocs folder so that you can use the localhost to test this application.
