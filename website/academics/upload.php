@@ -3,14 +3,17 @@
 require_once './dbh.inc.php';
 
 if(isset($_POST['submit'])) {
+    $sem = $_GET["sem"];
+    
 
     $name = $_POST["name"];
-    $sem = $_POST["sem"];
+    
+    $userName = $_POST["Uname"];
     $subject = $_POST["subject"];
     $type = $_POST["type"];
 
 
-    $file = $_FILES['file'];
+    $file = $_FILES["file"];
   
     $fileName = $_FILES['file']['name'];
     $fileTmpName = $_FILES['file']['tmp_name'];
@@ -31,7 +34,7 @@ if(isset($_POST['submit'])) {
                 $fileDestination = 'uploads/'.$fileNameNew;
                 move_uploaded_file($fileTmpName, $fileDestination);
 
-                $sql =  "INSERT INTO  filedata (fType, fUnqId , fName, fSubject, fSem) VALUES (?, ?, ?, ?, ?);";
+                $sql =  "INSERT INTO  filedata (fType, fUnqId , fName, fSubject, fSem, uName) VALUES (?, ?, ?, ?, ?, ?);";
                 $stmt = mysqli_stmt_init($conn);
 
                 if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -41,10 +44,10 @@ if(isset($_POST['submit'])) {
 
                 // $heshedPwd = password_hash($pwd, PASSWORD_DEFAULT );
 
-                mysqli_stmt_bind_param($stmt, "ssssi", $type, $fileNameNew, $name, $subject, $sem);
+                mysqli_stmt_bind_param($stmt, "ssssis", $type, $fileNameNew, $name, $subject, $sem, $userName);
                 mysqli_stmt_execute($stmt);
                 mysqli_stmt_close($stmt);
-                header("Location: index.php?uploadsuccess");
+                header("Location: semester.php?uploadsuccess");
             }else{
                 echo "File Size too big!";
             }

@@ -45,54 +45,51 @@
         </div>
       </nav>
       <div class="container">
-        <div class="xyz"><p>DOWNLOAD</p></div>
     <?php
-    
-    if(isset($_GET["sem"])){
-      
-      if(isset($_GET["subject"])){
-        
         require_once './dbh.inc.php';
-        $sub = $_GET["subject"];
-        $sem = $_GET["sem"];
-        $query = mysqli_query($conn, "SELECT * FROM filedata");
-        $rowCount = mysqli_num_rows($query);
-        ?>
-        
-        <table class="table">
-          
-          <tr>
-          <td class="first">Sr. No.</td>
-          <td class="first">Document</td>
-          <td class="first">Document Type</td>
-          <td class="first">Uploaded by</td>
-          </tr>
+        if(isset($_POST["submit"])){
+            $sem = $_POST["sem"];
+            
+            $sql = "SELECT * FROM uploadsub WHERE semId = ?;";
+            $stmt = mysqli_stmt_init($conn);
 
-        <?php
-          $sub = $_GET["subject"];
-          $sem = $_GET["sem"];
-          for($i=0;$i<$rowCount;$i++){
-            $row = mysqli_fetch_assoc($query);
-            $rSem = strval($row["fSem"]);
-            $rSub = strval($row["fSubject"]);
-            if("'$rSem'" == $sem and "'$rSub'" == $sub){
-            ?>
-            <tr>
-              <td><?php echo $i+1;?></td>
-              <td><a target="_blank" href="uploads/<?php echo $row["fUnqId"]?>"><?php echo $row["fName"];?></a></td>
-              <td><?php echo $row["fType"]?></td>
-              <td><?php echo $row["uName"]?></td>
-
-            </tr>
-            <?php
+            if(!mysqli_stmt_prepare($stmt, $sql)){
+                header("location: ../index.php?error=stmtfailed");
+                exit();
             }
-          }
-          ?>
-        </table>
-        <?php
-      }
-    }
 
+            mysqli_stmt_bind_param($stmt, "i", $sem);
+            mysqli_stmt_execute($stmt);
+
+            $resultData = mysqli_stmt_get_result($stmt);
+            ?>
+            <form action=<?php echo "./upload.php?sem=$sem" ?> method="POST" enctype="multipart/form-data">
+                <select name="subject">
+                    <option value="0">Select Subject</option>
+            <?php
+            foreach($resultData as $s){
+                ?>
+                <option value="<?php echo $s["subName"];?>"><?php echo $s["subName"];?></option>
+                <?php
+            }
+            mysqli_stmt_close($stmt);
+            ?>
+                </select>
+                <select name="type">
+                    <option value="">Select Type of Document</option>
+                    <option value="THEORY">Theory</option>
+                    <option value="PRACTICAL">Practical</option>
+                    <option value="PAPERS">Previous year Paper</option>
+                </select>
+
+                <input name="name" type="text" placeholder="Document Name">
+                <input name="Uname" type = "text" placeholder="User Name">
+                <input type="file" name="file">
+                <button type="submit" name="submit">UPLOAD</button>
+
+            </form>
+            <?php
+        }
     ?>
     </div>
 </body>
