@@ -12,7 +12,7 @@
 ## Svnit-Spot features:-
 
   - ##### used **(php,sql)** for server side scripting
-  - ##### used**(html,css,javascript)** for client side scripting
+  - ##### used **(html,css,javascript)** for client side scripting
   - ##### build to make your college life easy
 
 # How to open my website ?
