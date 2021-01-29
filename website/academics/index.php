@@ -3,15 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="./download.css">
-    <link rel="stylesheet" type="text/css" href="../src/css/menuToggle.css"> -->
+   <link rel="stylesheet" type="text/css" href="./download.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/menuToggle.css">
 
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Document</title>
 </head>
+<style>
+  .buton{
+        width: 50%;
+        background-color:  antiquewhite;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius:5px;
+  }
+  .btn{
+    background-color:  rgb(228, 149, 149);
+    border: 2px solid black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:5px;
+  }
+  .back{
+  color: antiquewhite;
+  
+  margin-left: 20px;
+}
+.left{
+  font-size: 1.5cm;
+}
+</style>
 <body class="body">
       <nav role="navigation">
         <div id="menuToggle">
@@ -44,9 +82,9 @@
           </ul>
         </div>
       </nav>
-      <div class="container">
+      <div class="container choose">
         <form action="./getSub.php" method="POST">
-          <select name="sem">
+          <select class="buton" name="sem">
             <option value = disabled>Select Semester</option>
             <option value="1">Sem 1</option>
             <option value="2">Sem 2</option>
@@ -57,9 +95,12 @@
             <option value="7">Sem 7</option>
             <option value="8">Sem 8</option>
           </select>
-          <button type="submit" name="submit">NEXT</button>
+          <br>
+          <br>
+          <button class ="btn" type="submit" name="submit">NEXT</button>
         </form>
    
       </div>
+      <a class="left" href="semester.php"><i class="fa fa-arrow-left back" aria-hidden="true"><br>Back</i></a>
 </body>
 </html>

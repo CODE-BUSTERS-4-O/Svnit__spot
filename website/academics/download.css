@@ -28,4 +28,9 @@
     font-size: xx-large;
     text-align: center;
 }
-
+.choose form select option {
+    font-size: 20px;
+    text-align: center;
+    
+    
+}
