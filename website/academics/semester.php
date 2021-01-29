@@ -37,6 +37,14 @@
   float:right;
   border-radius:5px;
 }
+.xyz{
+    border:5px ridge rosybrown;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(228, 149, 149);
+    font-size: xx-large;
+    text-align: center;
+}
 
 </style>
 </head>
@@ -142,6 +150,6 @@
         
       </div>
       <a href="index.php" class="btn">UPLOAD DOCUMENT</a>
-      <a href="#" class="buy">BUY OR SELL BOOKS</a>
+      <a href="buysell/sellShow.php" class="buy">BUY OR SELL BOOKS</a>
 </body>
 </html>

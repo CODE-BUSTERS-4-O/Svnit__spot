@@ -42,8 +42,6 @@ if(isset($_POST['submit'])) {
                     exit();
                 }
 
-                // $heshedPwd = password_hash($pwd, PASSWORD_DEFAULT );
-
                 mysqli_stmt_bind_param($stmt, "ssssis", $type, $fileNameNew, $name, $subject, $sem, $userName);
                 mysqli_stmt_execute($stmt);
                 mysqli_stmt_close($stmt);
