@@ -14,3 +14,13 @@
   - ##### used php,sql for server side scripting
   - ##### used html,css,javascript for client side scripting
   - ##### build to make your college life easy
+
+# how to open my website 
+
+* In order to use this project, you need to install XAMP .
+* create a folder library in htdocs folder so that you can use the localhost to test this application.
+*  Then you need to add these files to library folder .
+* you need to create database called the library.
+* add SQL files(present in the register folder) in PHPMyAdmin dashboard.
+* Place the web/ folder in your apache server.
+* RUN PROJECT
