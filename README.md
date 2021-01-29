@@ -11,8 +11,8 @@
 
 ## Svnit-Spot features:-
 
-  - #### used **(php,sql)** for server side scripting
-  - #### used **(html,css,javascript)** for client side scripting
+  - #### used **PHP,SQL** for server side scripting
+  - #### used **HTML,CSS,JAVASCRIPT** for client side scripting
   - #### build to make your college life easy
 
 # How to open our website ?
