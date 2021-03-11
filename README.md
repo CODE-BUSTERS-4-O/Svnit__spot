@@ -24,3 +24,8 @@
 5. Add SQL files(present in the register folder) in **PHPMyAdmin dashboard**.
 6. Place the **web/ folder** in your apache server.
 7. **RUN** PROJECT
+
+# Team members:
+- Aena verma
+- lisa verma
+- prince 
